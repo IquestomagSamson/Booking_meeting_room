@@ -1,0 +1,61 @@
+﻿@page
+@model BookingRoom.Pages.Booking.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Bookings</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Bookings.booking_title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bookings.booking_title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bookings.start_time)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bookings.start_time)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bookings.end_time)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bookings.end_time)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bookings.participants)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bookings.participants)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bookings.note)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bookings.note)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bookings.room_id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bookings.room_id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bookings.users_id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bookings.users_id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Bookings.Booking_id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

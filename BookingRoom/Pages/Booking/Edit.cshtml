@@ -1,0 +1,65 @@
+﻿@page
+@model BookingRoom.Pages.Booking.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Bookings</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Bookings.Booking_id" />
+            <div class="form-group">
+                <label asp-for="Bookings.booking_title" class="control-label"></label>
+                <input asp-for="Bookings.booking_title" class="form-control" />
+                <span asp-validation-for="Bookings.booking_title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bookings.start_time" class="control-label"></label>
+                <input asp-for="Bookings.start_time" class="form-control" />
+                <span asp-validation-for="Bookings.start_time" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bookings.end_time" class="control-label"></label>
+                <input asp-for="Bookings.end_time" class="form-control" />
+                <span asp-validation-for="Bookings.end_time" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bookings.participants" class="control-label"></label>
+                <input asp-for="Bookings.participants" class="form-control" />
+                <span asp-validation-for="Bookings.participants" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bookings.note" class="control-label"></label>
+                <input asp-for="Bookings.note" class="form-control" />
+                <span asp-validation-for="Bookings.note" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bookings.room_id" class="control-label"></label>
+                <input asp-for="Bookings.room_id" class="form-control" />
+                <span asp-validation-for="Bookings.room_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bookings.users_id" class="control-label"></label>
+                <input asp-for="Bookings.users_id" class="form-control" />
+                <span asp-validation-for="Bookings.users_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

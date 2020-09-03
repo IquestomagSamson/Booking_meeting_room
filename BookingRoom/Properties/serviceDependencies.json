@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "UserContext"
+    },
+    "mssql2": {
+      "type": "mssql",
+      "connectionId": "RoomContext"
+    },
+    "mssql3": {
+      "type": "mssql",
+      "connectionId": "BookingContext"
+    },
+    "secrets1": {
+      "type": "secrets"
+    },
+    "mssql4": {
+      "type": "mssql",
+      "connectionId": "DBCon"
+    }
+  }
+}
